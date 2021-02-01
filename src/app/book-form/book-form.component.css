@@ -1,0 +1,37 @@
+@import '../../assets/css/bootstrap.min.css';
+@import '../../assets/css/animate.css';
+@import '../../assets/css/jquery-ui.min.css';
+@import '../../assets/css/meanmenu.min.css';
+@import '../../assets/css/font-awesome.min.css';
+@import '../../assets/venobox/venobox.css';
+@import '../../assets/lib/css/nivo-slider.css';
+@import '../../assets/lib/css/preview.css';
+@import '../../assets/style.css';
+@import '../../assets/css/responsive.css';
+@import '../../assets/css/owl.carousel.css';
+@import '../../assets/css/owl.carousel.css';
+@import '../../assets/css/owl.carousel.css';
+
+
+
+#submitcreate{
+    margin-left: 85%;
+    margin-top:5%;
+}
+button#submitcreate:disabled{
+    background-color: grey;
+    
+}
+#delete{
+    margin-top: -100%;
+    background: #f3323c none repeat scroll 0 0;
+    border: 1px solid #f3323c;
+    border-radius: 20px;
+    color: #ffffff;
+    height: 40px;
+    padding: 0 22px;
+    transition: all 0.3s ease 0s;
+    font-size: 16px;
+    font-weight: 500;
+    text-transform: uppercase;
+}

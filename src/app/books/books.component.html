@@ -1,0 +1,95 @@
+
+<div class="shopping-area section-padding">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3 col-sm-3 col-xs-12">
+                <app-categories></app-categories>
+            </div>
+            <div class="col-md-9 col-sm-9 col-xs-12">
+                <div class="shop-tab-area">
+                    <div class="shop-tab-list">
+                        <div class="shop-tab-pill pull-left">
+                            <ul>
+                                <li class="active" id="left"><a data-toggle="pill" href="#home"><i class="fa fa-th"></i><span>Grid</span></a></li>
+                                <li><a data-toggle="pill" href="#menu1"><i class="fa fa-th-list"></i><span>List</span></a></li>
+                            </ul>
+                        </div>
+                        <div class="shop-tab-pill pull-right">
+                            <ul>
+                                <li class="product-size-deatils">
+                                    <div class="show-label">
+                                        <label>Show : </label>
+                                        <select>
+                                            <option value="10" selected="selected">10</option>
+                                            <option value="09">09</option>
+                                            <option value="08">08</option>
+                                            <option value="07">07</option>
+                                            <option value="06">06</option>
+                                        </select>
+                                    </div>
+                                </li>
+                                <li class="product-size-deatils">
+                                    <div class="show-label">
+                                        <label><i class="fa fa-sort-amount-asc"></i>Sort by : </label>
+                                        <select>
+                                            <option value="position" selected="selected">Position</option>
+                                            <option value="Name">Name</option>
+                                            <option value="Price">Price</option>
+                                        </select>
+                                    </div>
+                                </li>	
+                                <li class="shop-pagination"><a href="#">1</a></li>
+                                <li class="shop-pagination"><a href="#">2</a></li>
+                                <li class="shop-pagination"><a href="#"><i class="fa fa-caret-right"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="tab-content">
+                        <div class="row tab-pane fade in active" id="home">
+                            <div class="shop-single-product-area">
+                           
+                                <div class="col-md-4 col-sm-6" *ngFor="let book of books">
+                                    <div class="single-banner">
+                                        <div class="product-wrapper">
+                                            <a href="#" class="single-banner-image-wrapper">
+                                                <img alt="" src="http://localhost:8000/public/uploads/images/{{book.imageName}}">
+                                                <div class="price"><span>$</span>{{book.price}}</div>
+                                            </a>
+                                            <div class="product-description">
+                                                <div class="functional-buttons">
+                                                    <a href="#" title="Add to Cart">
+                                                        <i class="fa fa-shopping-cart"></i>
+                                                    </a>
+                                                    <a href="#" title="Add to Wishlist">
+                                                        <i class="fa fa-heart-o"></i>
+                                                    </a>
+                                                    <a href="#" title="Quick view" data-toggle="modal" data-target="#productModal">
+                                                        <i class="fa fa-compress"></i>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="banner-bottom text-center">
+                                            <div class="banner-bottom-title">
+                                                <a routerLink="/show/{{book.id}}">{{book.title}}</a>
+                                            </div>
+                                            <div class="rating-icon">
+                                                <i class="fa fa-star icolor"></i>
+                                                <i class="fa fa-star icolor"></i>
+                                                <i class="fa fa-star icolor"></i>
+                                                <i class="fa fa-star icolor"></i>
+                                                <i class="fa fa-star"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                           
+                            </div>
+                        </div>
+                   
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

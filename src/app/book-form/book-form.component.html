@@ -1,0 +1,100 @@
+
+   
+		<div class="my-account-area section-padding">
+			<div class="container">
+				<div class="row">
+					<div class="addresses-lists">
+						<div class="col-xs-12 col-sm-3 col-lg-3">
+							<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+								<div class="panel panel-default">
+									<div class="panel-heading" role="tab" id="headingOne">
+										<h4 class="panel-title">
+											<a role="button" data-toggle="collapse" routerLink="/admin/categories" routerLinkActive="active">
+												<i class="fa fa-building"></i>
+											   <span>Admin categories</span>
+											</a>
+										</h4>
+									</div>
+									
+								</div>
+								<div class="panel panel-default">
+									<div class="panel-heading" role="tab" id="headingTwo">
+										<h4 class="panel-title">
+											<a class="collapsed" role="button" routerLink="/admin/books">
+												<i class="fa fa-list-ol"></i>
+												<span>Admin books</span>
+											</a>
+										</h4>
+									</div>
+								
+								</div>
+								<div class="panel panel-default">
+									<div class="panel-heading" role="tab" id="headingThree">
+										<h4 class="panel-title">
+											<a class="collapsed" >
+												<i class="fa fa-file-o"></i>
+												<span>Logout</span>
+											</a>
+										</h4>
+									</div>
+									
+								</div>
+								
+							</div>
+						</div>
+						<div class="col-xs-12 col-sm-9 col-lg-9">
+  
+                                            <form [formGroup]="bookForm" (ngSubmit)="FormBookSubmit()" enctype="multipart/form-data">
+                                                <h2 class="heading-title"  >
+                                                    BOOK FORM 
+                                                   
+                                                </h2>
+                                                
+                                                
+                                                <div>
+                                                    <p class="form-row">
+                                                        <input type="text" placeholder="Title" formControlName="title" >
+                                                    </p>
+                                                    <p class="form-row">
+                                                        <input type="text" placeholder="Author" formControlName="author" >
+                                                    </p>
+                                                    <p class="form-row">
+                                                        <input  type="number" min="1" max="1.59" placeholder="Price" formControlName="price" >
+                                                    </p>
+                                                    <div *ngIf="!isEditForm">
+                                                      <label>Image</label>
+                                                        <input  type="file" formControlName="image" accept="image/*" (change)="fileProgress($event)">
+                                                    
+                                                    </div>
+                                                        <br>
+                            
+                                                    <select2 [data]="data" multiple="true"  [(ngModel)]="selected" formControlName="categories" searchable="true"   ></select2>
+                                                    
+                                                    <button name="submitcreate" [disabled]="!bookForm.valid" id="submitcreate" type="submit" class="btn-default">
+                                                        <span>
+                                                          
+                                                            SAVE 
+                                                        </span>
+                                                    </button>
+                                                    
+                                                </div>
+                                                </form>
+                                         
+						</div>
+					</div>
+				</div>
+				
+			</div>
+		</div>
+		<!-- My Account Area End -->
+
+     <!-- Loging Area End -->
+     <script>
+        $(function () {
+          //Initialize Select2 Elements
+          $('.select2').select2()
+      
+                
+      
+        })
+      </script>

@@ -1,0 +1,64 @@
+<div class="login-account section-padding">
+    <div class="container">
+         <div class="row">
+            
+             <div class="col-md-6 col-sm-6">
+                 <form [formGroup]="inscription" class="create-account-form" (ngSubmit)="createAccount()" >
+                     <h2 class="heading-title">
+                         CREATE AN ACCOUNT
+                     </h2>
+                     <p class="form-row">
+                        <input type="text" placeholder=" First Name" formControlName="name">
+                    </p>
+                    <p class="form-row">
+                        <input type="text" placeholder=" Last Name" formControlName="lastName">
+                    </p>
+                     <p class="form-row">
+                         <input type="email" placeholder="Email address" formControlName="email">
+                     </p>
+                     <div [hidden]="unique" class="unique">
+                        Label already exists !
+                    </div>
+                     <p class="form-row">
+                        <input type="password" placeholder="Password" password formControlName="password">
+                    </p>
+                     <div class="submit">					
+                         <button  id="submitcreate" type="submit" class="btn-default" [disabled]="!inscription.valid">
+                             <span>
+                                 <i class="fa fa-user left"></i>
+                                 Create an account
+                             </span>
+                         </button>
+                     </div>
+                 </form>
+             </div>
+             <div class="col-md-6 col-sm-6">
+                <form class="create-account-form"  [formGroup]="login"  (ngSubmit)="authenticate()" >
+                     <h2 class="heading-title">
+                         ALREADY RESIGTERED? 
+                     </h2>
+                     <div [hidden]="login_prob" class="unique">
+                        verifier vos informations !
+                    </div>
+                     <p class="form-row">
+                         <input type="email" placeholder="Email address" formControlName="email">
+                     </p>
+                     
+                     <p class="form-row">
+                         <input type="password" placeholder="Password" formControlName="password">
+                     </p>
+                     
+                     <div class="submit">					
+                         <button  id="submitlogin" type="submit" class="btn-default" [disabled]="!login.valid">
+                             <span>
+                                 <i class="fa fa-user left"></i>
+                                 SING IN
+                             </span>
+                         </button>
+                     </div>                          
+                </form>
+             </div>
+            
+         </div>               
+    </div>
+ </div>

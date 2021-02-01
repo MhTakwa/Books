@@ -1,0 +1,52 @@
+		<!-- My Account Area Start -->
+		<div class="my-account-area section-padding">
+			<div class="container">
+				<div class="row">
+					<div class="addresses-lists">
+						<div class="col-xs-12 col-sm-3 col-lg-3">
+							<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+								<div class="panel panel-default">
+									<div class="panel-heading" role="tab" id="headingOne">
+										<h4 class="panel-title">
+											<a role="button" data-toggle="collapse" routerLink="/admin/categories" >
+												<i class="fa fa-building"></i>
+											   <span>Admin categories</span>
+											</a>
+										</h4>
+									</div>
+									
+								</div>
+								<div class="panel panel-default">
+									<div class="panel-heading" role="tab" id="headingTwo">
+										<h4 class="panel-title">
+											<a class="collapsed" role="button" routerLink="/admin">
+												<i class="fa fa-list-ol"></i>
+												<span>Admin books</span>
+											</a>
+										</h4>
+									</div>
+								
+								</div>
+								<div class="panel panel-default">
+									<div class="panel-heading" role="tab" id="headingThree">
+										<h4 class="panel-title">
+											<a class="collapsed"  (click)="logout()">
+												<i class="fa fa-file-o"></i>
+												<span>Logout</span>
+											</a>
+										</h4>
+									</div>
+									
+								</div>
+								
+							</div>
+						</div>
+						<div class="col-xs-12 col-sm-6 col-lg-6">
+						  <router-outlet name="admin"></router-outlet>
+						</div>
+					</div>
+				</div>
+				
+			</div>
+		</div>
+		<!-- My Account Area End -->

@@ -1,0 +1,76 @@
+
+		<div class="my-account-area section-padding">
+			<div class="container">
+				<div class="row">
+					<div class="addresses-lists">
+						<div class="col-xs-12 col-sm-3 col-lg-3">
+							<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+								<div class="panel panel-default">
+									<div class="panel-heading" role="tab" id="headingOne">
+										<h4 class="panel-title">
+											<a role="button" data-toggle="collapse" routerLink="/admin/categories" routerLinkActive="active">
+												<i class="fa fa-building"></i>
+											   <span>Admin categories</span>
+											</a>
+										</h4>
+									</div>
+									
+								</div>
+								<div class="panel panel-default">
+									<div class="panel-heading" role="tab" id="headingTwo">
+										<h4 class="panel-title">
+											<a class="collapsed" role="button" routerLink="/admin/books">
+												<i class="fa fa-list-ol"></i>
+												<span>Admin books</span>
+											</a>
+										</h4>
+									</div>
+								
+								</div>
+								<div class="panel panel-default">
+									<div class="panel-heading" role="tab" id="headingThree">
+										<h4 class="panel-title">
+											<a class="collapsed" >
+												<i class="fa fa-file-o"></i>
+												<span>Logout</span>
+											</a>
+										</h4>
+									</div>
+									
+								</div>
+								
+							</div>
+						</div>
+						<div class="col-xs-12 col-sm-9 col-lg-9">
+                            <a routerLink="/admin/categories/add" id="add__new__list" type="button" class="btn btn-success position-absolute" >
+                                New category
+                            </a>
+                       
+                            <table class="table table-hover">
+                              <thead>
+                                <tr>
+                                  <th scope="col">ID</th>
+                                  <th   scope="col">Label</th>
+                              
+                                  <th></th>
+                                
+                                </tr>
+                              </thead>
+                              <tbody>
+                                <tr *ngFor="let category of categories" (click)="editcategory(category);">
+                                  <th scope="row">{{category.id}}</th>
+                                  <td>{{category.label}}</td>
+                                
+                                  <td><a routerLink="/admin/categories/delete/{{category.id}}">Delete</a></td>
+                                
+                                </tr>
+                              </tbody>
+                            </table>
+                              
+						</div>
+					</div>
+				</div>
+				
+			</div>
+		</div>
+		<!-- My Account Area End -->

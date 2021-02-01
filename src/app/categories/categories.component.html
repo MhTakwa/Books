@@ -1,0 +1,18 @@
+<div class="shop-widget">
+    <div class="shop-widget-top">
+        <aside class="widget widget-categories">
+            <h2 class="sidebar-title text-center">CATEGORY</h2>
+            <ul class="sidebar-menu">
+                <li *ngFor="let category of categories">
+                    <a routerLink="/categories/{{category.id}}">
+                       <i class="fa fa-angle-double-right"></i>
+                        {{category.label}}                                         
+                        <span>( {{category.products.length}} ) </span>
+                    </a>
+                </li>           
+            </ul>
+        </aside> 
+                                
+    </div>
+
+</div>
